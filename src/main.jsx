@@ -1,13 +1,17 @@
+// Importando dependencias
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+// Importando CSS
+import './index.css'
+// Importando componentes
+import App from './App.jsx'
 import Erros from './routes/error/Erros.jsx'
 import Home from './routes/Home.jsx'
 import Books from './routes/Books.jsx'
 import Login from './routes/Login.jsx'
 
+// Criando a variável router
 const router = createBrowserRouter([{
   element: <App/>,
   path: '/',

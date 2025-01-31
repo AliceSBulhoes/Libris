@@ -1,6 +1,6 @@
 // Importando componentes
 import Sidebar from '../components/Sidebar'
-import Dashboard from '../components/Dashboard'
+import Bookshelf from '../components/Bookshelf'
 
 const Books = () => {
   return (
@@ -8,7 +8,7 @@ const Books = () => {
       {/* Importando componente do side bar */}
       <Sidebar/>
       {/* Importando componente do dashboard */}
-      <Dashboard/>
+      <Bookshelf/>
     </div>
   )
 }

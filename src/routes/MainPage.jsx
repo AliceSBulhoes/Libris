@@ -2,7 +2,7 @@
 import Sidebar from '../components/Sidebar'
 import Bookshelf from '../components/Bookshelf'
 
-const Books = () => {
+const MainPage = () => {
   return (
     <div className='flex'>
       {/* Importando componente do side bar */}
@@ -13,4 +13,4 @@ const Books = () => {
   )
 }
 
-export default Books
+export default MainPage

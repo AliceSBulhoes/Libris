@@ -28,9 +28,9 @@ const Home = () => {
                 Comece aqui
               </Link>
               {/* Redireciona para a página sobre nós */}
-              <a className="text-sm/6 font-semibold text-gray-900">
+              <Link to='/sobre' className="text-sm/6 font-semibold text-gray-900">
                 Sobre Nós <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -10,6 +10,7 @@ import Erros from './routes/error/Erros.jsx'
 import Home from './routes/Home.jsx'
 import Books from './routes/Books.jsx'
 import Login from './routes/Login.jsx'
+import Sobre from './routes/Sobre.jsx'
 
 // Criando a variável router
 const router = createBrowserRouter([{
@@ -18,6 +19,7 @@ const router = createBrowserRouter([{
   errorElement: <Erros/>,
   children:[
     {element: <Home/>, path: '/' },
+    {element: <Sobre/>, path: '/sobre'},
     {element: <Books/>, path: '/books'},
     {element: <Login/>, path: '/login'}
   ]

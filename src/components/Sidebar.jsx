@@ -1,6 +1,5 @@
 // Importando depêndencias
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 // Importando ícones do react
 import { BiSolidBookmark } from 'react-icons/bi'
 import { FaBars, FaHome, FaUserAlt } from 'react-icons/fa'
@@ -16,7 +15,7 @@ const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={`md:w-60 ${isOpen ? "w-64" : "w-20"} bg-paleta-400 transition-width duration-300 text-paleta-200`}>
+        <div className={`md:w-60 ${isOpen ? "w-64 overflow-y-hidden" : "w-20"} bg-paleta-400 transition-width duration-300 text-paleta-200`}>
             {/* Título do Site */}
             <div className={`flex md:justify-start ${isOpen ? "justify-between" : "justify-start"} items-center p-4`}>
                 {/* Logo e Nome */}
@@ -31,26 +30,28 @@ const Sidebar = () => {
             </div>
             {/* Side Menu */}
             <nav className='mt-4'>
-                {/* Item para os livros */}
-                <Link to="/libris" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
-                    <TbBook size={24} />
-                    <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookshelf</span>
-                </Link>
-                {/* Item para livros marcados */}
-                <Link to="/libris/bookmarks" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
-                    <BiSolidBookmark size={24} />
-                    <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookmark's</span>
-                </Link>
-                {/* Item para o perfil do usuário */}
-                <Link to="/libris/profile" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
-                    <FaUserAlt size={24} />
-                    <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Profile</span>
-                </Link>
-                {/* Item para a página de Login */}
-                <Link to="/libris/login" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
-                    <IoMdLogIn size={24} />
-                    <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Login</span>
-                </Link>
+                <ul>
+                    {/* Item para os livros */}
+                    <li className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                        <TbBook size={24} />
+                        <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookshelf</span>
+                    </li>
+                    {/* Item para livros marcados */}
+                    <li className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                        <BiSolidBookmark size={24} />
+                        <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookmark's</span>
+                    </li>
+                    {/* Item para o perfil do usuário */}
+                    <li className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                        <FaUserAlt size={24} />
+                        <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Profile</span>
+                    </li>
+                    {/* Item para a página de Login */}
+                    <li className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                        <IoMdLogIn size={24} />
+                        <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Login</span>
+                    </li>
+                </ul>
             </nav>
         </div>
     )

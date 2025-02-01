@@ -21,7 +21,7 @@ const Home = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               {/* Redireciona para a página principal */}
-              <Link to="/libris"
+              <Link to="/books"
               
                 className="rounded-md bg-paleta-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-paleta-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >

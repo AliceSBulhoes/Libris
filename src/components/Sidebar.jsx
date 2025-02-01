@@ -15,7 +15,7 @@ const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className={`md:w-60 ${isOpen ? "w-64 overflow-y-hidden" : "w-20"} bg-paleta-400 transition-width duration-300 text-paleta-200`}>
+        <div className={`md:w-60 ${isOpen ? "w-64" : "w-20"} bg-paleta-400 transition-width duration-300 text-paleta-200`}>
             {/* Título do Site */}
             <div className={`flex md:justify-start ${isOpen ? "justify-between" : "justify-start"} items-center p-4`}>
                 {/* Logo e Nome */}

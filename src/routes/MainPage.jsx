@@ -1,6 +1,8 @@
-// Importando componentes
+// Importando dependencias
+import { Outlet } from 'react-router-dom'
+// Importando componente
 import Sidebar from '../components/Sidebar'
-import Bookshelf from '../components/Bookshelf'
+
 
 const MainPage = () => {
   return (
@@ -8,7 +10,7 @@ const MainPage = () => {
       {/* Importando componente do side bar */}
       <Sidebar/>
       {/* Importando componente do dashboard */}
-      <Bookshelf/>
+      <Outlet/>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import request from 'superagent';
 // Importando icones do react
 import { TbBook } from 'react-icons/tb';
 // Importando componente
-import SearchBar from './SearchBar';
+import SearchBar from '../../components/SearchBar';
 
 const Bookshelf = () => {
 
@@ -39,7 +39,7 @@ const Bookshelf = () => {
     }
 
     return (
-        <div className='p-8 bg-paleta-200 min-h-screen flex-1 flex flex-col gap-6'>
+        <div className='p-8 bg-paleta-200 min-h-screen flex-1 flex flex-col gap-6 overflow-x-hidden'>
             {/* Título da Página */}
             <div className='flex justify-start items-center gap-2'>
                 {/* Icone da Página */}

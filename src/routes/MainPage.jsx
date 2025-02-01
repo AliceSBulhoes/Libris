@@ -1,16 +1,18 @@
-// Importando componentes
+// Importando dependencias
+import { Outlet } from 'react-router-dom'
+// Importando componente
 import Sidebar from '../components/Sidebar'
-import Bookshelf from '../components/Bookshelf'
 
-const Books = () => {
+
+const MainPage = () => {
   return (
     <div className='flex'>
       {/* Importando componente do side bar */}
       <Sidebar/>
       {/* Importando componente do dashboard */}
-      <Bookshelf/>
+      <Outlet/>
     </div>
   )
 }
 
-export default Books
+export default MainPage

@@ -15,6 +15,7 @@ import Bookshelf from './routes/mainpage/Bookshelf.jsx'
 import Bookmarks from './routes/mainpage/Bookmarks.jsx'
 import Login from './routes/mainpage/Login.jsx'
 import Profile from './routes/mainpage/Profile.jsx'
+import SignUp from './routes/mainpage/SignUp.jsx'
 
 // Criando a variável router
 const router = createBrowserRouter([{
@@ -31,6 +32,7 @@ const router = createBrowserRouter([{
         {element: <Bookmarks/>, path: '/libris/bookmarks'},
         {element: <Profile/>, path: '/libris/profile'},
         {element: <Login/>, path: '/libris/login'},
+        {element: <SignUp/>, path: '/libris/signup'}
       ]
     }
   ]

@@ -1,3 +1,5 @@
+// Importando dependencias
+import { Link } from 'react-router-dom'
 // Importando ícone
 import { BsGoogle } from 'react-icons/bs'
 
@@ -38,7 +40,7 @@ const Login = () => {
                 <button className="bg-paleta-500 hover:bg-paleta-400 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">Log In</button>
             </form>
             {/* Redireciona para a página de cadastro */}
-            <p className="text-center text-paleta-400 mt-3 text-[14px]">Não tem uma conta?  <a href="/signup" className="text-paleta-500 font-bold uppercase">Cadastre-se</a></p>
+            <p className="text-center text-paleta-400 mt-3 text-[14px]">Não tem uma conta?  <Link to="/libris/signup" className="text-paleta-500 font-bold uppercase">Cadastre-se</Link></p>
         </div>
       </div>
     </div>

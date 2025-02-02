@@ -1,5 +1,7 @@
-import { BsGoogle } from 'react-icons/bs'
+// Importando dependencias
 import { Link } from 'react-router-dom'
+// Importando ícone
+import { BsGoogle } from 'react-icons/bs'
 
 const SignUp = () => {
   return (

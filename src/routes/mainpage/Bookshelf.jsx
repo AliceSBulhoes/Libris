@@ -3,8 +3,9 @@ import { useState } from 'react';
 import request from 'superagent';
 // Importando icones do react
 import { TbBook } from 'react-icons/tb';
-// Importando componente
+// Importando componentes
 import SearchBar from '../../components/SearchBar';
+import BookList from '../../components/bookshelf/BookList';
 
 const Bookshelf = () => {
 
@@ -32,8 +33,10 @@ const Bookshelf = () => {
         request
             .get(`https://www.googleapis.com/books/v1/volumes?q=${searchField}`)
             .then((data) => {
-                // Para ver se está funcionando
-                console.log(data) 
+                // Adicionando os livros pesquisados na variável books
+                console.log(books) 
+                setBooks(data['body']['items'])
+                
             })
 
     }
@@ -49,6 +52,8 @@ const Bookshelf = () => {
             </div>
             {/* Componente da barra de pesquisa */}
             <SearchBar searchBook={searchBook} handleSearch={handleSearch}/>
+            {/* Componente para os livros */}
+            <BookList books={books} />
         </div>
     );
 };

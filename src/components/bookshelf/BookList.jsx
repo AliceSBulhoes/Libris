@@ -1,8 +1,14 @@
-import React from 'react'
+import BookCard from './BookCard'
 
-const BookList = () => {
+const BookList = ({ books }) => {
   return (
-    <div>BookList</div>
+    <div className='flex flex-wrap gap-10 justify-center'>
+        {
+            books.map((book, i) => {
+                return <BookCard key={i} book={book}/>
+            })
+        }
+    </div>
   )
 }
 

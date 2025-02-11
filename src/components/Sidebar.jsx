@@ -32,20 +32,20 @@ const Sidebar = () => {
             {/* Side Menu */}
             <nav className='mt-4'>
                 {/* Item para os livros */}
-                <Link to="/libris" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                <Link to="/libris" className='flex items-center p-4 hover:bg-paleta-500'>
                     <TbBook size={24} />
                     <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookshelf</span>
                 </Link>
                 {/* Item para livros marcados */}
-                <Link to="/libris/bookmarks" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                <a className='flex items-center p-4 cursor-default opacity-25'>
                     <BiSolidBookmark size={24} />
                     <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Bookmark's</span>
-                </Link>
+                </a>
                 {/* Item para o perfil do usuário */}
-                <Link to="/libris/profile" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
+                <a className='flex items-center p-4 cursor-default opacity-25'>
                     <FaUserAlt size={24} />
                     <span className={`ml-4 md:block ${isOpen ? "block" : "hidden"}`}>Profile</span>
-                </Link>
+                </a>
                 {/* Item para a página de Login */}
                 <Link to="/libris/login" className='flex items-center p-4 hover:bg-paleta-500 cursor-pointer'>
                     <IoMdLogIn size={24} />
